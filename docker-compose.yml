@@ -12,12 +12,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: kinto/kinto-server:latest
+    image: azataiot/kinto-arm:latest
     depends_on:
-    - db
-    - cache
+      - db
+      - cache
     ports:
-    - "8888:8888"
+      - "8888:8888"
     environment:
       KINTO_CACHE_BACKEND: kinto.core.cache.memcached
       KINTO_CACHE_HOSTS: cache:11211 cache:11212

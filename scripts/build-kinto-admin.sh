@@ -1,5 +1,13 @@
 #!/bin/bash
 set -euo pipefail
+# -e Exit immediately if a command exits with a non-zero status.
+# -u show you an error as “unbound variable” which means that you have initialized a variable
+# but didn’t use it later which is not recommended for the programmers.
+# -o <option-name>
+# pipefail 
+# If set, causes the pipeline to return the exit status of the last (rightmost) 
+# command to exit with a non-zero status. It returns zero if all commands in 
+# the pipeline exit successfully. This option is disabled by default.
 
 VERSION=$(cat kinto/plugins/admin/VERSION)
 TAG="v${VERSION}"
